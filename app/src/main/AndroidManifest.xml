@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tplink.sdk.tpopensdkdemo">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:name=".common.TPApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <activity android:name=".device.MainActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".player.PlayerActivity"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor" />
+
+        <activity
+            android:name=".player.PreviewActivity2"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity3"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity4"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity5"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity6"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity7"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity8"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity9"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity10"
+            android:launchMode="singleInstance"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".player.PlaybackActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.DeviceAddByManualActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.DeviceAutoDiscoverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.DeviceAddEnterInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.DeviceSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.StorageInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.TimeRebootActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.RecordPlanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.ModifyDevInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.DeviceAboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.DeviceAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.DeviceAddSoftApActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.RecordPlanDayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.RecordPlanAdvanceActivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.VolumeSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".device.DeviceAddBySmartConfigActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".device.DevChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".device.ChannelInfoActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
