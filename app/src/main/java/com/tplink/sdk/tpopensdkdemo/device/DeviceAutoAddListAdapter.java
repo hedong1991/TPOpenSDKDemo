@@ -2,6 +2,7 @@ package com.tplink.sdk.tpopensdkdemo.device;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.tplink.sdk.tpopensdkdemo.R;
 import com.tplink.sdk.tpopensdkdemo.bean.IPCDiscoverDevBean;
+import com.tplink.sdk.tpopensdkdemo.util.SharedPreferencesUtils;
 
 import java.util.ArrayList;
 
@@ -48,8 +50,13 @@ public class DeviceAutoAddListAdapter extends RecyclerView.Adapter<DeviceAutoAdd
         final IPCDiscoverDevBean deviceBean = mDeviceList.get(position);
         holder.mCoverIv.setImageResource(deviceBean.mDevInfo.getType() == TYPE_IPC ? R.drawable.device_add_ipc_wire
                 : R.drawable.device_add_nvr);
-        holder.mDeviceTypeTv.setText(deviceBean.mDevInfo.getType() == TYPE_NVR ? mContext.getString(R.string.device_add_type_nvr2)
+        String fileNameStr = SharedPreferencesUtils.getInstance(mContext).loadString(deviceBean.mDevInfo.getStrAddress()+"_name");
+        if (TextUtils.isEmpty(fileNameStr))
+            holder.mDeviceTypeTv.setText(deviceBean.mDevInfo.getType() == TYPE_NVR ? mContext.getString(R.string.device_add_type_nvr2)
                 : mContext.getString(R.string.device_add_type_ipc));
+        else
+            holder.mDeviceTypeTv.setText(fileNameStr);
+
         holder.mIpTv.setText(deviceBean.mDevInfo.getStrAddress());
 //        if (deviceBean.mIsAdded) {
 //            holder.mDeviceAddBtn.setText(mContext.getString(R.string.device_add_already));

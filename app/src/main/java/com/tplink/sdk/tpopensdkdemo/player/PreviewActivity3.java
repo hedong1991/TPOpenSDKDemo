@@ -551,7 +551,7 @@ public class PreviewActivity3 extends PlayerActivity {
 
                     String snapshotUri = mSdkDir.toString() +"/"+ fileNameStr + getString(R.string.suffix_jpg);
                     mPlayer.snapshot(snapshotUri);
-                    Log.e("联网 截图", "文件:"+snapshotUri);
+//                    Log.e("联网 截图", "文件:"+snapshotUri);
                     try {
                         Thread.sleep(2000l);
                     } catch (InterruptedException e) {
@@ -615,12 +615,12 @@ public class PreviewActivity3 extends PlayerActivity {
 //    };
 
     private void uploadFile(final File file) {
-        Log.e("联网 上传图片3", "文件3:"+file.getAbsolutePath());
+//        Log.e("联网 上传图片3", "文件3:"+file.getAbsolutePath());
         HttpRequestUtils.multiFileUpload(this, file, "http://119.23.219.202/api/sys/uploadImg", fileNameStr, new HttpRequestUtils.ResponseListener() {
             @Override
             public void getResponseData(String response) {
                 Toast.makeText(PreviewActivity3.this, "上传截图"+fileNameStr+"成功", Toast.LENGTH_SHORT).show();
-                Log.e("联网 上传图片3", "上传成功"+response);
+//                Log.e("联网 上传图片3", "上传成功"+response);
                 deleteFile(file.getPath(), PreviewActivity3.this);
             }
 

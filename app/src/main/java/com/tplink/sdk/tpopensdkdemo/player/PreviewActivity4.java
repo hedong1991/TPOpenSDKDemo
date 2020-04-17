@@ -551,7 +551,7 @@ public class PreviewActivity4 extends PlayerActivity {
 
                     String snapshotUri = mSdkDir.toString() +"/"+ fileNameStr + getString(R.string.suffix_jpg);
                     mPlayer.snapshot(snapshotUri);
-                    Log.e("联网 截图", "文件:"+snapshotUri);
+//                    Log.e("联网 截图", "文件:"+snapshotUri);
                     try {
                         Thread.sleep(2000l);
                     } catch (InterruptedException e) {
@@ -620,7 +620,7 @@ public class PreviewActivity4 extends PlayerActivity {
             @Override
             public void getResponseData(String response) {
                 Toast.makeText(PreviewActivity4.this, "上传截图"+fileNameStr+"成功", Toast.LENGTH_SHORT).show();
-                Log.e("联网 上传图片4", "上传成功"+response);
+//                Log.e("联网 上传图片4", "上传成功"+response);
                 deleteFile(file.getPath(), PreviewActivity4.this);
             }
 
