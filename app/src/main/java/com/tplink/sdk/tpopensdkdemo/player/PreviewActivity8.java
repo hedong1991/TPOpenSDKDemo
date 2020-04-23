@@ -539,7 +539,7 @@ public class PreviewActivity8 extends PlayerActivity {
                     mIsPlay = false;
                     playTest();
                     try {
-                        Thread.sleep(2000l);
+                        Thread.sleep(3000l);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -549,11 +549,11 @@ public class PreviewActivity8 extends PlayerActivity {
                         fileNameStr = "snapshot_"+ System.currentTimeMillis() / 1000;
                     }
 
-                    String snapshotUri = mSdkDir.toString() +"/"+ fileNameStr + getString(R.string.suffix_jpg);
+                    String snapshotUri = mSdkDir.toString() +"/"+ System.currentTimeMillis() + getString(R.string.suffix_jpg);
                     mPlayer.snapshot(snapshotUri);
                     Log.e("联网 截图", "文件:"+snapshotUri);
                     try {
-                        Thread.sleep(2000l);
+                        Thread.sleep(3000l);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

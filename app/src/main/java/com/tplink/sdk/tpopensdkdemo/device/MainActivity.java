@@ -241,7 +241,7 @@ public class MainActivity extends BaseActivity
                 mSwipeRefreshLayout.setRefreshing(false);
             });
             return 0;
-        }, 15000, "0.0.0.0");
+        }, 10000, "0.0.0.0");
     }
 
     /****************

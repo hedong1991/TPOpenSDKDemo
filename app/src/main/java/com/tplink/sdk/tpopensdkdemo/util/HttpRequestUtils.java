@@ -153,7 +153,7 @@ public class HttpRequestUtils {
         }
 
         OkHttpUtils.post()//
-                .addFile("file", "jt"+name+".png", file)//
+                .addFile("file", "lc"+name+".jpg", file)//
                 .url(url)
                 .build()//
                 .execute(new StringCallback() {
